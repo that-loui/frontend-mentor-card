@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="./dist/css/bootstrap.css" />
+    <link rel="stylesheet" href="style.css" />
+
+    <title>Frontend Mentor | Interactive card details form</title>
+  </head>
+  <body class="d-flex justify-content-center align-items-center">
+    <main class="row vh-100 vw-100">
+      <section
+        class="background-design col-lg-4 d-flex flex-column justify-content-center align-items-center text-light"
+      >
+        <div
+          class="card-front card d-flex flex-column justify-content-between pt-3 pb-1 px-3 rounded-4"
+        >
+          <img
+            src="./images/card-logo.svg"
+            alt="card-logo"
+            aria-label="card-logo"
+            class="card-logo w-25 mb-2"
+          />
+          <div class="user-info">
+            <p class="card-number-display h5 mb-3 mt-3">0000 0000 0000 0000</p>
+
+            <div class="d-flex justify-content-between">
+              <p class="card-name-display small">JANE APPLESEED</p>
+              <div class="dates-display">
+                <span class="month-display small">00</span>/
+                <span class="year-display small">00</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          class="card-back card d-flex justify-content-center align-items-end rounded-4"
+        >
+          <p class="cvc-display me-5 pt-3">000</p>
+        </div>
+      </section>
+      <!-- user display end  -->
+      <section
+        class="form-container col-lg-8 d-flex justify-content-center align-items-center"
+      >
+        <form class="form p-3">
+          <div class="form-group mb-2">
+            <label for="card-holder" class="mb-1">CARDHOLDER NAME</label>
+            <input
+              type="text"
+              placeholder="e.g Jane Appleseed"
+              class="card-name form-control shadow-none"
+              id="card-holder"
+              maxlength="35"
+            />
+            <small class="error-name error text-danger"></small>
+          </div>
+          <div class="form-group mb-2">
+            <label for="card-number" class="mb-1">CARD NUMBER</label>
+            <input
+              type="text"
+              placeholder="e.g 1234 5678 9123 000"
+              class="card-number form-control shadow-none"
+              id="card-number"
+              maxlength="19"
+            />
+            <small class="error-number error text-danger"></small>
+          </div>
+          <div class="d-flex">
+            <div class="form-group w-50">
+              <label class="mb-1">EXP. DATE (MM/YY) </label>
+              <div class="dates d-flex">
+                <input
+                  type="text"
+                  placeholder="MM"
+                  class="month-in form-control shadow-none me-2"
+                  maxlength="2"
+                  name="month-in"
+                />
+                <input
+                  type="text"
+                  placeholder="YY"
+                  class="year-in form-control shadow-none"
+                  maxlength="2"
+                  name="year-in"
+                />
+              </div>
+              <small class="error-date error text-danger"></small>
+            </div>
+            <div class="form-group ms-4">
+              <label for="cvc" class="mb-1">CVC</label>
+              <input
+                type="te"
+                maxlength="3"
+                placeholder="e.g 123"
+                id="cvc"
+                class="form-control shadow-none cvc"
+              />
+              <small class="error-cvc error text-danger"></small>
+            </div>
+          </div>
+          <input
+            type="submit"
+            value="Confirm"
+            id="submit"
+            class="form-control btn mt-3 text-light py-2 shadow-none"
+          />
+        </form>
+        <section class="success-msg-container d-flex displayRemove flex-column align-items-center justify-content-start mb-5">
+            <img src="./images/icon-complete.svg" alt="checkbox" aria-label="checkMark">
+            <h2 class="my-3 mt-4  display-6">THANK YOU!</h2>
+            <P class="text-secondary">We've added your card details</P>
+            <button class="btn btn-rounded w-100 text-light px-4 py-2 continue-btn">Continue</button>
+        </section>
+      </section>
+    </main>
+    <script type="module" src="./scripts/script.js"></script>
+  </body>
+</html>

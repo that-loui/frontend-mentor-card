@@ -1,0 +1,107 @@
+@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-size: 15px;
+  font-family: "Space Grotesk", san-serif;
+  background-color: hsl(0, 0%, 100%);
+  color: hsl(278, 68%, 11%);
+  text-wrap: nowrap;
+  overflow: hidden;
+}
+
+.background-design {
+  background-image: url("../images/bg-main-mobile.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 40%;
+  margin-bottom: 50px;
+}
+
+.form {
+  width: 100%;
+}
+.form label {
+  font-size: 13px;
+}
+.form input::placeholder {
+  opacity: 50%;
+}
+.form input[type=submit] {
+  background: hsl(278, 68%, 11%);
+}
+
+.card {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 7 px;
+  border: 0.5px solid rgb(160, 160, 160);
+  color: hsl(0, 0%, 100%);
+  position: relative;
+  min-width: 90%;
+  min-height: 65%;
+  font-size: 12px;
+}
+
+.card-front {
+  background-image: url("./images/bg-card-front.png");
+  top: 65%;
+  left: -15px;
+  z-index: 10;
+}
+
+.card-back {
+  background-image: url("./images/bg-card-back.png");
+  top: -37%;
+  right: -10px;
+}
+
+.success-msg-container .continue-btn {
+  background-color: hsl(278, 68%, 11%);
+}
+
+.displayRemove {
+  display: none !important;
+}
+
+@media (min-width: 1020px) {
+  .background-design {
+    background-image: url("./images/bg-main-desktop.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100%;
+  }
+  .form {
+    width: 40%;
+  }
+  .card {
+    min-height: 220px;
+    min-width: 25rem;
+    font-size: 15px;
+  }
+  .card-front {
+    top: -5%;
+    left: 35%;
+  }
+  .card-back {
+    top: 1%;
+    left: 50%;
+  }
+  .user-info .card-number-display {
+    word-spacing: 15px;
+    letter-spacing: 4px;
+    font-size: 25px !important;
+  }
+  .success-msg-container {
+    width: 50%;
+    position: relative;
+    left: 50px;
+  }
+}
