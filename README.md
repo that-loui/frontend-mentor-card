@@ -33,7 +33,7 @@ Users should be able to:
 ### Links
 
 - Repo URL: [](https://your-solution-url.com)
-- Live Site URL: [live site](https://frontend-mentor-card-verification.vercel.app/)
+- Live Site URL: [live site](https://frontend-mentor-card-jet.vercel.app/)
 
 ## My process
 
